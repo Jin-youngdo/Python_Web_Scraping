@@ -20,7 +20,7 @@ print(days[0])
 print(type(days))
 """
 
-"""
+
 # python dictionary
 jin_info = {
     "name" : "jin-young-do",
@@ -34,4 +34,6 @@ jin_info["pet"] = True
 print(jin_info)
 print("name : ", jin_info["name"])
 print("koren ? ",  jin_info["korean"])
-"""
+
+jin_info.update(name="Chin-youngdo")
+print(jin_info)
