@@ -30,7 +30,7 @@ for i in "Jin-youngdo":
     print(i)
 """
 
-# Assignment Weeks_2
+# Assignment Weeks_3
 """
 Again, the code is broken, you need to create 4 functions.
   - add_to_dict: Add a word to a dict.
