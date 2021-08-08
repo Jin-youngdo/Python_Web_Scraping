@@ -9,15 +9,16 @@ def get_last_page():
     # 원하는 웹사이트의 실시간 html 값 불러오기
     result = requests.get(URL)
     soup = BeautifulSoup(result.text, "html.parser")
-
     # html 내부의 원하는 정보값 추출하기 (html 페이지의 pagination 클래스 탐색 후 )
     # pagination 변수에 저장 -> pages변수에 pagintion 클래스 하위 메소드중 a 탐색후 저장.
     # 저장한 a 값들을 pages 리스트에 저장 후 리스트 인덱싱을 통해 마지막 np(next-page) 제거
     pagination = soup.find("div", {"class": "pagination"})
+
+
     links = pagination.find_all('a')
     pages = []
 
-    for link in links[:-1]:
+    for link in links[0:-1]:
         pages.append(int(link.string))
 
     max_page = pages[-1]
